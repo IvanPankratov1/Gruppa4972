@@ -1,57 +1,14 @@
-﻿// Задача №3
-// Напишите программу, которая будет выдавать название дня недели по заданному номеру.
-// int day = int.Parse(Console.ReadLine()??"0");
-
-// string [] dayOfWeek = new string[7];
-
-// dayOfWeek[0]="Понедельник";
-// dayOfWeek[1]="Вторник";
-// dayOfWeek[2]="Среда";
-// dayOfWeek[3]="Четверг";
-// dayOfWeek[4]="Пятница";
-// dayOfWeek[5]="Суббота";
-// dayOfWeek[6]="Воскресенье";
-
-// Console.WriteLine(dayOfWeek[day-1]);
-
-// System.Console.WriteLine("Введите номер");
-// int a = Convert.ToInt32 (Console.ReadLine());
-// switch (a)
-// {
-//    case 1: Console.WriteLine ("Пн");
-//    break;
-
-//    case 2: Console.WriteLine ("Вт");
-//    break;
-
-//    case 3: Console.WriteLine ("Ср");
-//    break;
-
-//    case 4: Console.WriteLine ("Чт");
-//    break;
-
-//    case 5: Console.WriteLine ("Пт");
-//    break;
-
-//    case 6: Console.WriteLine ("Сб");
-//    break;
-
-//    case 7: Console.WriteLine ("Вс");
-//    break;
-// }
-
-// string day = Console.ReadLine()??"0";
-
-// switch (day)
-// {
-//     case "1": Console.WriteLine("Понедельник"); break;
-//     case "2": Console.WriteLine("Вторник"); break;
-//     case "3": Console.WriteLine("Среда"); break;
-//     case "4": Console.WriteLine("Четверг"); break;
-//     case "5": Console.WriteLine("Пятница"); break;
-//     case "6": Console.WriteLine("Суббота"); break;
-//     case "7": Console.WriteLine("Воскресенье"); break;
-//     default: Console.WriteLine("Неверные данные"); break;
-// }
-
-string outDayOfWeek = System.Globalization.CultureInfo.GetCultureInfo("ru-Ru").DateTimeFormat.GetDayName((DayOfWeek)Enum.GetValues(typeof(DayOfWeek)).GetValue(dayNum));
+﻿// Задача 2: Напишите программу, которая на вход принимает два числа и 
+// выдаёт, какое число большее, а какое меньшее.
+Console.WriteLine("Первое число:"); // Выводим текст в консоль
+int numA = Convert.ToInt32 (Console.ReadLine()??"0"); // Вводим число и конвертируем его
+Console.WriteLine("Второе число:"); // Выводим текст в консоль
+int numB = int.Parse(Console.ReadLine()??"0"); // Вводим число и конвертируем его
+if (numA > numB) // Сравнение
+{
+    Console.WriteLine("Больше:" + numA  + " Меньше:" + numB); // Если все норм, то вывод такой)))
+}
+else
+{   
+    Console.WriteLine("Больше:" + numB + " Меньше:" + numA); // Если нет, то вывод такой))
+}
