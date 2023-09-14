@@ -40,5 +40,5 @@ public class Answer
 // Решние для ГБ
 // for (int i = 1; i <= N; i++)
 //     {
-//       Console.Write(Math.Pow(i, 3) + " ");
+//       Console.WriteLine(Math.Pow(i, 3));
 //     }
