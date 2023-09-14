@@ -13,7 +13,7 @@ public class Answer
     Console.WriteLine();
     for (int i = 1; i <= number; i++)
     {
-      Console.Write(Math.Pow(i, 3) + " ");
+      Console.WriteLine(Math.Pow(i, 3));
     }
 
   }
