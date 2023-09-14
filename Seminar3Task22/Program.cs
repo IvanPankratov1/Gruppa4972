@@ -2,28 +2,39 @@
 // Напишите программу, которая принимает на вход число (N) и 
 // выдаёт таблицу квадратов чисел от 1 до N.
 
-int ReadData(string msg)
+internal class Program
 {
-    Console.WriteLine(msg);
-    int num = int.Parse(Console.ReadLine() ?? "0");
-    return num;
-}
-string BuildLine(int n, int pow)
-{
-    string res = string.Empty; //""  -стринг емпти
-    for(int i = 1; i <= n; i++)
+    private static void Main(string[] args)
     {
-        res = res + Math.Pow(i,pow)+ " ";
+        int ReadData(string msg)
+        {
+            Console.WriteLine(msg);
+            int num = int.Parse(Console.ReadLine() ?? "0");
+            return num;
+        }
+        string BuildLine(int n, int pow)
+        {
+            string res = string.Empty;
+            for (int i = 1; i <= n; i++)
+            {
+                res = res + Math.Pow(i, pow) + " ";
+            }
+            return res;
+        }
+        void PrintResult(string msg)
+        {
+            Console.WriteLine(msg);
+        }
+        int n = ReadData("Введите число");
+        PrintResult(BuildLine(n, 1));
+        PrintResult(BuildLine(n, 3));
     }
-    return res;
 }
-void PrintResult(string msg)
-{
-    Console.WriteLine(msg);
-}
-int n = ReadData("Введите число");
-PrintResult(BuildLine(n, 1));
-PrintResult(BuildLine(n, 2));
+
+
+
+
+
 
 // Вывод сообщения и вызов метода OutputSquares
 // void Prompt(string message)
