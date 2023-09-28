@@ -51,14 +51,13 @@ public class Answer
   public static double[, ] CreateRandomMatrix(int m, int n, int minLimitRandom, int maxLimitRandom) 
   {
       // Введите свое решение ниже
-    System.Random rnd = new System.Random();
     double[,] array2D = new double [m, n];
        
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            array2D[i,j] = rnd.Next(minLimitRandom, maxLimitRandom);
+            array2D[i,j] = Convert.ToDouble(new Random().Next(-100, 100))/10;
         }
     }
      return array2D;
