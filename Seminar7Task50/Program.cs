@@ -51,43 +51,43 @@
 
 using System;
 
-public class Answer {
-    public static void PrintArray (int [,] matrix)
+public class Answer
+{
+    public static void PrintArray(int[,] matrix)
     {
-      // Введите свое решение ниже
+        // Введите свое решение ниже
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
             Console.WriteLine();
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                Console.Write( matrix[i,j] + "\t");
+                Console.Write(matrix[i, j] + "\t");
             }
         }
 
 
     }
-  
+
     public static int[,] CreateIncreasingMatrix(int n, int m, int k)
     {
-      // Введите свое решение ниже
+        // Введите свое решение ниже
         int[,] arr = new int[n, m];
         int z = 0;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < m; j++)
             {
-                arr[i, j] = 1 + z;
-                z += k;
-                
+                arr[i, j] = (arr[i, j]+1) + z;
+                z = z + k;
             }
         }
         return arr;
 
     }
-  
-    public static int[] FindNumberByPosition (int [,] matrix, int rowPosition, int columnPosition)
-    {  
-      // Введите свое решение ниже
+
+    public static int[] FindNumberByPosition(int[,] matrix, int rowPosition, int columnPosition)
+    {
+        // Введите свое решение ниже
         if (rowPosition > matrix.GetLength(0) || columnPosition > matrix.GetLength(1))
         {
             return new int[0];
@@ -101,9 +101,9 @@ public class Answer {
 
     }
 
-    public static void PrintCheckIfError (int[] results, int X, int Y)
+    public static void PrintCheckIfError(int[] results, int X, int Y)
     {
-      // Введите свое решение ниже
+        // Введите свое решение ниже
         if (results.Length == 0)
         {
             Console.WriteLine();
@@ -115,26 +115,30 @@ public class Answer {
             Console.WriteLine($"The number in [{X}, {Y}] is {results[0]}");
         }
 
-        
+
     }
 
     // Не удаляйте и не меняйте метод Main! 
-    static public void Main(string[] args) {
+    static public void Main(string[] args)
+    {
         int n, m, k, x, y;
 
-        if (args.Length >= 5) {
-           n = int.Parse(args[0]);
-           m = int.Parse(args[1]);
-           k = int.Parse(args[2]);
-           x = int.Parse(args[3]);
-           y = int.Parse(args[4]);
-        } else {
-           // Здесь вы можете поменять значения для отправки кода на Выполнение
-           n = 3;
-           m = 4;
-           k = 2;
-           x = 2;
-           y = 3;
+        if (args.Length >= 5)
+        {
+            n = int.Parse(args[0]);
+            m = int.Parse(args[1]);
+            k = int.Parse(args[2]);
+            x = int.Parse(args[3]);
+            y = int.Parse(args[4]);
+        }
+        else
+        {
+            // Здесь вы можете поменять значения для отправки кода на Выполнение
+            n = 3;
+            m = 4;
+            k = 2;
+            x = 2;
+            y = 3;
         }
 
         // Не удаляйте строки ниже
